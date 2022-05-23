@@ -9,13 +9,16 @@
 const getAllTasks = async ({ setTasks }) => {
   try {
     const token = localStorage.getItem("token");
-    let response = await fetch("http://localhost:5000/api/task/get-all-tasks", {
-      method: "GET",
-      headers: {
-        "auth-token": token,
-        "Content-Type": "application/json",
-      },
-    });
+    let response = await fetch(
+      "https://rohan842-my-todo-app.herokuapp.com/api/task/get-all-tasks",
+      {
+        method: "GET",
+        headers: {
+          "auth-token": token,
+          "Content-Type": "application/json",
+        },
+      }
+    );
     let data = await response.json();
     setTasks(data);
   } catch (error) {
@@ -27,7 +30,7 @@ const deleteTask = async ({ ID }) => {
   try {
     const token = localStorage.getItem("token");
     let response = await fetch(
-      `http://localhost:5000/api/task/delete-task/${ID}`,
+      `https://rohan842-my-todo-app.herokuapp.com/api/task/delete-task/${ID}`,
       {
         method: "DELETE",
         headers: {
@@ -51,7 +54,7 @@ const updateTask = async ({ ID, input, setInput }) => {
 
     const token = localStorage.getItem("token");
     let response = await fetch(
-      `http://localhost:5000/api/task/update-task/${ID}`,
+      `https://rohan842-my-todo-app.herokuapp.com/api/task/update-task/${ID}`,
       {
         method: "PUT",
         headers: {
@@ -70,13 +73,16 @@ const updateTask = async ({ ID, input, setInput }) => {
 const deleteAll = async () => {
   try {
     const token = localStorage.getItem("token");
-    let response = await fetch(`http://localhost:5000/api/task/delete-all/`, {
-      method: "DELETE",
-      headers: {
-        "auth-token": token,
-        "Content-Type": "application/json",
-      },
-    });
+    let response = await fetch(
+      `https://rohan842-my-todo-app.herokuapp.com/api/task/delete-all/`,
+      {
+        method: "DELETE",
+        headers: {
+          "auth-token": token,
+          "Content-Type": "application/json",
+        },
+      }
+    );
   } catch (error) {
     console.log(error);
   }
@@ -91,14 +97,17 @@ const addNewTask = async ({ input, setInput }) => {
 
     let dataJSON = JSON.stringify(data);
 
-    let response = await fetch("http://localhost:5000/api/task/add-new-task", {
-      method: "POST",
-      headers: {
-        "auth-token": token,
-        "Content-Type": "application/json",
-      },
-      body: dataJSON,
-    });
+    let response = await fetch(
+      "https://rohan842-my-todo-app.herokuapp.com/api/task/add-new-task",
+      {
+        method: "POST",
+        headers: {
+          "auth-token": token,
+          "Content-Type": "application/json",
+        },
+        body: dataJSON,
+      }
+    );
 
     setInput("");
   } catch (error) {

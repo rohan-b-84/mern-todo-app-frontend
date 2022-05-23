@@ -12,7 +12,7 @@
 
 //     let dataJSON = JSON.stringify(data);
 
-//     let response = await fetch("http://localhost:5000/api/auth/sign-up", {
+//     let response = await fetch("https://rohan842-my-todo-app.herokuapp.com/api/auth/sign-up", {
 //       method: "POST",
 //       headers: {
 //         "Content-Type": "application/json",
@@ -34,7 +34,7 @@
 
 //     let dataJSON = JSON.stringify(data);
 
-//     let response = await fetch("http://localhost:5000/api/auth/verify-user", {
+//     let response = await fetch("https://rohan842-my-todo-app.herokuapp.com/api/auth/verify-user", {
 //       method: "POST",
 //       headers: {
 //         "Content-Type": "application/json",
