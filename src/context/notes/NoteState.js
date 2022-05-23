@@ -13,7 +13,7 @@ const NoteState = (props) => {
     try {
       let token = localStorage.getItem("token");
       let response = await fetch(
-        "https://rohan842-my-todo-app.herokuapp.com/api/task/get-all-tasks",
+        "https://rohan-b-84-todo.herokuapp.com/api/task/get-all-tasks",
         {
           method: "GET",
           headers: {
@@ -36,7 +36,7 @@ const NoteState = (props) => {
       let dataJSON = JSON.stringify(note);
 
       let response = await fetch(
-        "https://rohan842-my-todo-app.herokuapp.com/api/task/add-new-task",
+        "https://rohan-b-84-todo.herokuapp.com/api/task/add-new-task",
         {
           method: "POST",
           headers: {
@@ -66,7 +66,7 @@ const NoteState = (props) => {
 
     try {
       let token = localStorage.getItem("token");
-      let url = `https://rohan842-my-todo-app.herokuapp.com/api/task/delete-task/${newID}`;
+      let url = `https://rohan-b-84-todo.herokuapp.com/api/task/delete-task/${newID}`;
       let response = await fetch(url, {
         method: "DELETE",
         headers: {
@@ -86,7 +86,7 @@ const NoteState = (props) => {
       let token = localStorage.getItem("token");
 
       let response = await fetch(
-        `https://rohan842-my-todo-app.herokuapp.com/api/task/update-task/${note._id}`,
+        `https://rohan-b-84-todo.herokuapp.com/api/task/update-task/${note._id}`,
         {
           method: "PUT",
           headers: {
@@ -112,7 +112,7 @@ const NoteState = (props) => {
     try {
       const token = localStorage.getItem("token");
       await fetch(
-        `https://rohan842-my-todo-app.herokuapp.com/api/task/delete-all/`,
+        `https://rohan-b-84-todo.herokuapp.com/api/task/delete-all/`,
         {
           method: "DELETE",
           headers: {
@@ -131,7 +131,7 @@ const NoteState = (props) => {
     try {
       const token = localStorage.getItem("token");
       let response = await fetch(
-        `https://rohan842-my-todo-app.herokuapp.com/api/task/delete-completed/`,
+        `https://rohan-b-84-todo.herokuapp.com/api/task/delete-completed/`,
         {
           method: "DELETE",
           headers: {
