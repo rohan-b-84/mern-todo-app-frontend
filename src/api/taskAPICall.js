@@ -10,7 +10,7 @@ const getAllTasks = async ({ setTasks }) => {
   try {
     const token = localStorage.getItem("token");
     let response = await fetch(
-      "https://rohan-b-84-todo.herokuapp.com/api/task/get-all-tasks",
+      "https://rohan842-my-todo-app.herokuapp.com/api/task/get-all-tasks",
       {
         method: "GET",
         headers: {
@@ -30,7 +30,7 @@ const deleteTask = async ({ ID }) => {
   try {
     const token = localStorage.getItem("token");
     let response = await fetch(
-      `https://rohan-b-84-todo.herokuapp.com/api/task/delete-task/${ID}`,
+      `https://rohan842-my-todo-app.herokuapp.com/api/task/delete-task/${ID}`,
       {
         method: "DELETE",
         headers: {
@@ -54,7 +54,7 @@ const updateTask = async ({ ID, input, setInput }) => {
 
     const token = localStorage.getItem("token");
     let response = await fetch(
-      `https://rohan-b-84-todo.herokuapp.com/api/task/update-task/${ID}`,
+      `https://rohan842-my-todo-app.herokuapp.com/api/task/update-task/${ID}`,
       {
         method: "PUT",
         headers: {
@@ -74,7 +74,7 @@ const deleteAll = async () => {
   try {
     const token = localStorage.getItem("token");
     let response = await fetch(
-      `https://rohan-b-84-todo.herokuapp.com/api/task/delete-all/`,
+      `https://rohan842-my-todo-app.herokuapp.com/api/task/delete-all/`,
       {
         method: "DELETE",
         headers: {
@@ -98,7 +98,7 @@ const addNewTask = async ({ input, setInput }) => {
     let dataJSON = JSON.stringify(data);
 
     let response = await fetch(
-      "https://rohan-b-84-todo.herokuapp.com/api/task/add-new-task",
+      "https://rohan842-my-todo-app.herokuapp.com/api/task/add-new-task",
       {
         method: "POST",
         headers: {

@@ -19,7 +19,7 @@ const UserState = (props) => {
       let data = JSON.stringify(user);
 
       let res = await fetch(
-        "https://rohan-b-84-todo.herokuapp.com/api/auth/sign-up",
+        "https://rohan842-my-todo-app.herokuapp.com/api/auth/sign-up",
         {
           method: "POST",
           headers: {
@@ -41,7 +41,7 @@ const UserState = (props) => {
       let data = JSON.stringify(user);
 
       let res = await fetch(
-        "https://rohan-b-84-todo.herokuapp.com/api/auth/verify-user",
+        "https://rohan842-my-todo-app.herokuapp.com/api/auth/verify-user",
         {
           method: "POST",
           headers: {
@@ -63,7 +63,7 @@ const UserState = (props) => {
   const getUsername = async () => {
     try {
       const token = localStorage.getItem("token");
-      fetch("https://rohan-b-84-todo.herokuapp.com/api/auth/get-user", {
+      fetch("https://rohan842-my-todo-app.herokuapp.com/api/auth/get-user", {
         method: "POST",
         headers: {
           "auth-token": token,
