@@ -1,0 +1,246 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 18px;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+nav {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  z-index: 999;
+  padding: 1rem 5rem;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.nav-logo {
+  font-size: 2rem;
+}
+.nav-item {
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 2.5rem;
+}
+.nav-item:last-of-type {
+  background-color: #9bbcef;
+}
+.todo-app {
+  width: 30rem;
+  margin: auto;
+}
+.todo-header {
+  grid-column: 1 / span 6;
+}
+.todo-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+form {
+  grid-column: 1 / span 6;
+  display: flex;
+}
+input {
+  outline: none;
+  box-shadow: none;
+  border: 2px solid #9bbcef;
+  background-color: #e6f0fe;
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  margin-bottom: 3rem;
+}
+.todo-app button {
+  background: #9bbcef;
+  border: none;
+  box-shadow: none;
+  outline: none;
+  appearance: none;
+  margin-bottom: 3rem;
+}
+.todo-app button:hover {
+  background: #9bbcef;
+  border: none;
+  box-shadow: none;
+  outline: none;
+  appearance: none;
+  cursor: pointer;
+}
+button {
+  min-width: fit-content;
+  padding: 1rem;
+}
+.todo-item {
+  grid-column: 1 / span 6;
+  list-style-type: none;
+  padding: 15px;
+  width: 80%;
+  margin: auto;
+  margin-top: 0.5rem;
+  background-color: #cee1fc;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.todo-item:hover {
+  background-color: #a0b6db;
+}
+li {
+  width: 100%;
+  padding-left: calc(45px);
+  padding-right: calc(60px + 10px + 1rem);
+}
+
+/* ! ********************* ! */
+.home-page,
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  padding: 5rem;
+  gap: 3rem;
+}
+.home-page aside {
+  width: 60%;
+  background: url("./images/5272.jpg") center no-repeat;
+  background-size: contain;
+}
+section {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.btn-container {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+.btn {
+  border: 2px solid #9bbcef;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  text-align: center;
+  width: 6rem;
+  border-radius: 5rem;
+}
+.btn-signup {
+  background: #9bbcef;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.auth-page aside {
+  width: 50%;
+  background: url("./images/2155223.jpg") center no-repeat;
+  background-size: contain;
+}
+
+.todo-page {
+  min-height: 100vh;
+  padding: 5rem;
+}
+
+.auth-page button {
+  border: none;
+  background: none;
+  border: 2px solid #a0b6db;
+  border-radius: 2rem;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+button:hover {
+  border: 2px solid #a0b6db;
+  background-color: #a0b6db;
+}
+
+.controls {
+  margin-top: 1rem;
+  cursor: pointer;
+  grid-column: 1 / span 6;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.deleteAll,
+.deleteCompleted {
+  background-color: rgb(241, 122, 122);
+  cursor: pointer;
+  text-align: center;
+  padding: 1rem;
+}
+.deleteAll:hover,
+.deleteCompleted:hover {
+  background-color: rgb(244, 80, 80);
+}
+
+.icon {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  display: block;
+  position: absolute;
+}
+
+.icon-check {
+  left: 15px;
+  border-radius: 50%;
+  border: 2px solid #9bbcef;
+}
+.icon-edit {
+  background: url("./images/icon-edit.svg") no-repeat center;
+  right: 45px;
+}
+.icon-delete {
+  right: 15px;
+  background: url("./images/icon-cross.svg") no-repeat center;
+}
+.icon-edit,
+.icon-delete {
+  display: none;
+}
+.todo-item:hover .icon-edit,
+.todo-item:hover .icon-delete {
+  display: block;
+}
+.todo-item:hover .icon-check {
+  border-color: #3265b0;
+}
+.sign-up {
+  gap: 0;
+}
+
+.todo-item-complete li {
+  text-decoration: line-through;
+}
+.todo-item-complete .icon-check {
+  text-decoration: line-through;
+  background: url("./images/icon-check.svg") center no-repeat, #9bbcef;
+}
+.todo-item-complete:hover .icon-check {
+  border-color: #3265b0;
+  background: url("./images/icon-check.svg") center no-repeat, #3265b0;
+}
