@@ -203,6 +203,7 @@ button:hover {
   height: 20px;
   display: block;
   position: absolute;
+  z-index: 999999;
 }
 
 .icon-check {
