@@ -245,3 +245,10 @@ button:hover {
   border-color: #3265b0;
   background: url("./images/icon-check.svg") center no-repeat, #3265b0;
 }
+
+@media screen and (max-width: 600px) {
+  .home-page,
+  .auth-page {
+    flex-direction: column;
+  }
+}
