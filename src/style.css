@@ -261,7 +261,9 @@ button:hover {
   }
   section,
   aside {
-    height: 40vh;
     width: 100%;
+  }
+  aside {
+    height: 40vh;
   }
 }
