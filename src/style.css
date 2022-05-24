@@ -255,6 +255,7 @@ button:hover {
   .home-page,
   .auth-page {
     flex-direction: column;
+    gap: 3rem;
   }
   section,
   aside {
