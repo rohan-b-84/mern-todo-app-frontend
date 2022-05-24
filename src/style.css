@@ -253,6 +253,7 @@ button:hover {
   }
   section,
   aside {
+    height: 40%;
     width: 100%;
   }
 }
