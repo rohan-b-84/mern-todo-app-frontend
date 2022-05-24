@@ -112,7 +112,9 @@ li {
 }
 .home-page aside {
   width: 60%;
-  background: url("./images/5272.jpg") center no-repeat;
+  background: url("./images/5272.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
   background-size: contain;
 }
 section {
@@ -153,7 +155,10 @@ h1 {
 
 .auth-page aside {
   width: 50%;
-  background: url("./images/2155223.jpg") center no-repeat;
+  background: url("./images/2155223.jpg");
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
   background-size: contain;
 }
 
