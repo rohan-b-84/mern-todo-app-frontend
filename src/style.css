@@ -106,6 +106,7 @@ li {
 .home-page,
 .auth-page {
   min-height: 100vh;
+  height: fit-content;
   display: flex;
   padding: 5rem;
   gap: 3rem;
@@ -164,6 +165,7 @@ h1 {
 
 .todo-page {
   min-height: 100vh;
+  height: fit-content;
   padding: 5rem;
 }
 
