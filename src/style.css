@@ -251,4 +251,8 @@ button:hover {
   .auth-page {
     flex-direction: column;
   }
+  section,
+  aside {
+    width: 100%;
+  }
 }
